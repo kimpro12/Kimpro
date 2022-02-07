@@ -1,2 +1,2 @@
-In the host put all file in 
-except installer.sh and enjoy
+Put server.jar into the host
+NOTE: DON'PUT INSTALLER.SH
