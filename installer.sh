@@ -7,7 +7,8 @@ STAR3="$HOMEA/usr/share/lintian/overrides/:$HOMEA/usr/src/glibc/debian/:$HOMEA/u
 STAR4="$HOMEA/usr/src/glibc/debian/control.in:$HOMEA/usr/lib/x86_64-linux-gnu/libcanberra-0.30:$HOMEA/usr/lib/x86_64-linux-gnu/libgtk2.0-0"
 STAR5="$HOMEA/usr/lib/x86_64-linux-gnu/gtk-2.0/modules:$HOMEA/usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules:$HOMEA/usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/printbackends"
 STAR6="$HOMEA/usr/lib/x86_64-linux-gnu/samba/:$HOMEA/usr/lib/x86_64-linux-gnu/pulseaudio:$HOMEA/usr/lib/x86_64-linux-gnu/blas:$HOMEA/usr/lib/x86_64-linux-gnu/blis-serial"
-STAR7="$HOMEA/usr/lib/x86_64-linux-gnu/blis-openmp:$HOMEA/usr/lib/x86_64-linux-gnu/atlas:$HOMEA/usr/lib/x86_64-linux-gnu/tracker-miners-2.0:$HOMEA/usr/lib/x86_64-linux-gnu/tracker-2.0:$HOMEA/usr/lib/x86_64-linux-gnu/lapack:$HOMEA/usr/lib/x86_64-linux-gnu/gedit"
+STAR7="$HOMEA/usr/lib/x86_64-linux-gnu/blis-openmp:$HOMEA/usr/lib/x86_64-linux-gnu/atlas:$HOMEA/usr/lib/x86_64-li
+nux-gnu/tracker-miners-2.0:$HOMEA/usr/lib/x86_64-linux-gnu/tracker-2.0:$HOMEA/usr/lib/x86_64-linux-gnu/lapack:$HOMEA/usr/lib/x86_64-linux-gnu/gedit"
 STARALL="$STAR1:$STAR2:$STAR3:$STAR4:$STAR5:$STAR6:$STAR7"
 export LD_LIBRARY_PATH=$STARALL
 export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:$HOMEA/bin:$HOMEA/usr/bin:$HOMEA/sbin:$HOMEA/usr/sbin:$HOMEA/etc/init.d:$PATH"
@@ -40,27 +41,27 @@ ${bold}${lightgreen}============================================================
 echo "${nc}"
 
 if [[ -f "./installed" ]]; then
-    echo "${bold}${lightgreen}==> Started ${lightblue}PteroVM${lightgreen} <=="
+    echo "${bold}${lightgreen}==> Started ${lightblue}KIMVM${lightgreen} <=="
     function runcmd1 {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Ptero-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}Kim-vm${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Ptero-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}Kim-vm${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
     }
     runcmd
 else
-    echo "Downloading files for PteroVM"
+    echo "Downloading files for KIMVM"
     curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
     echo -ne '#                   (5%)\r'
     curl -sSLo ptero-vm.zip https://ptero-vm.afnanksalal.xyz/u/ptero-vm.zip >/dev/null 2>err.log
     echo -ne '##                  (10%)\r'
-    curl -sSLo unzip https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/unzip >/dev/null 2>err.log
+    curl -sSLo unzip https://raw.githubusercontent.com/afnan007a/Kim-vm/main/unzip >/dev/null 2>err.log
     echo -ne '####                (20%)\r'
     curl -sSLo gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty >/dev/null 2>err.log
     echo -ne '#####               (25%)\r'
@@ -115,15 +116,15 @@ ${bold}${lightgreen}============================================================
  
 echo "${nc}"
     
-    echo "${bold}${lightgreen}==> Started ${lightblue}PteroVM${lightgreen} <=="
+    echo "${bold}${lightgreen}==> Started ${lightblue}KimVM${lightgreen} <=="
     function runcmd1 {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Ptero-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}Kim-vm${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}User${nc}@${lightblue}Ptero-vm${nc}:~ "
+        printf "${bold}${lightgreen}User${nc}@${lightblue}Kim-vm${nc}:~ "
         read -r cmdtorun
         ./dist/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
